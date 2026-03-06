@@ -65,12 +65,10 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href={SITE_CONFIG.whatsapp.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary-dark transition-colors"
           >
-            Book Free Session
+            Get in Touch
           </Link>
         </nav>
 
@@ -125,12 +123,10 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href={SITE_CONFIG.whatsapp.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="bg-primary text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-primary-dark transition-colors mt-4"
           >
-            Book Free Session
+            Get in Touch
           </Link>
         </nav>
       </div>

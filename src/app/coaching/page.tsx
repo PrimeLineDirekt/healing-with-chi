@@ -4,6 +4,7 @@ import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
+import CoachingPulse from "@/components/ui/CoachingPulse";
 import {
   PAGE_SEO,
   COACHING_CONTENT,
@@ -51,9 +52,7 @@ export default function CoachingPage() {
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-text mb-4">
                 {COACHING_CONTENT.headline}
               </h1>
-              <p className="text-xl md:text-2xl font-heading text-text-muted italic">
-                {COACHING_CONTENT.subheadline}
-              </p>
+              <CoachingPulse />
             </div>
           </ScrollReveal>
         </div>
@@ -95,20 +94,6 @@ export default function CoachingPage() {
         </div>
       </Section>
 
-      {/* Quote */}
-      <Section background="sand">
-        <ScrollReveal>
-          <div className="max-w-2xl mx-auto text-center py-4">
-            <blockquote className="font-heading text-2xl md:text-3xl italic text-text leading-relaxed mb-4">
-              &ldquo;{COACHING_CONTENT.quote.text}&rdquo;
-            </blockquote>
-            <cite className="text-text-muted font-body text-base not-italic">
-              - {COACHING_CONTENT.quote.author}
-            </cite>
-          </div>
-        </ScrollReveal>
-      </Section>
-
       {/* Focus Areas */}
       <Section background="default">
         <SectionHeading title="Focus Areas" subtitle="What I can help you work through" />
@@ -139,8 +124,8 @@ export default function CoachingPage() {
             <p className="text-lg text-text-muted leading-relaxed mb-8">
               {COACHING_CONTENT.cta.text}
             </p>
-            <Button href={SITE_CONFIG.whatsapp.link} external size="lg">
-              Book Your Free Session
+            <Button href="/contact" size="lg">
+              Get in Touch
             </Button>
           </div>
         </ScrollReveal>

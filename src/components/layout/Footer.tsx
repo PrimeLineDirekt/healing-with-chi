@@ -14,8 +14,8 @@ export default function Footer() {
               {SITE_CONFIG.name}
             </h3>
             <p className="text-sand/80 text-sm leading-relaxed max-w-xs">
-              {SITE_CONFIG.tagline}. Holistic coaching, bodywork, and energy
-              healing in Mazunte, Mexico.
+              {SITE_CONFIG.tagline}. Holistic coaching and bodywork
+              in Da Nang, Vietnam.
             </p>
           </div>
 

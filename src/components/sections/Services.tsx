@@ -62,9 +62,9 @@ export default function Services() {
     <Section id="services" background="default">
       <SectionHeading
         title="How I Can Help"
-        subtitle="Three paths to healing - choose what resonates with you"
+        subtitle="Two paths to healing - choose what resonates with you"
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 scroll-reveal-stagger">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto scroll-reveal-stagger">
         {SERVICES.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}

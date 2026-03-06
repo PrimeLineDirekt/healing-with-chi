@@ -7,22 +7,22 @@ export const SITE_CONFIG = {
   name: "Healing With Chi",
   tagline: "Reflective Coaching and Healing",
   description:
-    "Holistic coaching, bodywork, and energy healing in Mazunte, Mexico. Book your free 30-minute session with Chi.",
+    "Holistic coaching and bodywork in Da Nang, Vietnam. Shiatsu, Reiki, Thai Massage, and reflective life coaching with Chi.",
   url: "https://healingwithchi.com",
   locale: "en_US",
   whatsapp: {
     number: "+31618555674",
     displayNumber: "+31 6 18 555 674",
-    message: "Hi Chi, I'd like to book a free 30-minute session.",
-    link: "https://wa.me/31618555674?text=Hi%20Chi%2C%20I'd%20like%20to%20book%20a%20free%2030-minute%20session.",
+    message: "Hi Chi, I'm interested in booking an introductory session.",
+    link: "https://wa.me/31618555674?text=Hi%20Chi%2C%20I'm%20interested%20in%20booking%20an%20introductory%20session.",
   },
   email: "chihongyo@gmail.com",
   address: {
-    street: "Calle Rinconcito, Cabanas El Agujon",
-    postalCode: "70946",
-    city: "Mazunte",
-    state: "Oaxaca",
-    country: "Mexico",
+    street: "87 Dương Trí Trạch, An Hải",
+    postalCode: "550000",
+    city: "Da Nang",
+    state: "Sơn Trà",
+    country: "Vietnam",
   },
   social: {
     instagram: "",
@@ -69,15 +69,6 @@ export const SERVICES: Service[] = [
       "Shiatsu, Reiki, Sports Massage, and Thai Massage. Integrating Eastern energy work with Western techniques for deep, lasting relief.",
     href: "/bodywork",
     icon: "hands",
-  },
-  {
-    id: "healing",
-    title: "Energy Healing",
-    subtitle: "Opening Channels",
-    shortDescription:
-      "Process-oriented energy work that opens blocked channels and restores natural flow. Not an instant cure - a guided journey of transformation.",
-    href: "/bodywork#energy-healing",
-    icon: "energy",
   },
 ];
 
@@ -130,8 +121,8 @@ export const COACHING_CONTENT = {
     author: "Thich Nhat Hanh",
   },
   cta: {
-    headline: "Start with a Free Session",
-    text: "30 minutes. No pressure. No cost. Just an honest conversation about where you are and where you want to be.",
+    headline: "Ready to Take the First Step?",
+    text: "Book an introductory session for €49. If we decide to continue working together, the full amount will be deducted from your program price.",
   },
   focusAreas: [
     "Trauma recovery",
@@ -215,11 +206,6 @@ export const BODYWORK_CONTENT = {
   subheadline: "Where East Meets West",
   intro:
     "I integrate Eastern energy work with Western massage techniques. Every body is different, so every session is tailored to what you need - whether that's deep tissue release, energy rebalancing, or both.",
-  energyHealing: {
-    title: "Energy Healing",
-    description:
-      "Energy healing is about opening channels that have become blocked through stress, trauma, or habitual tension. It's a process - not an instant cure. Through the interaction between giver and receiver, we create space for your natural energy to flow freely again.",
-  },
 } as const;
 
 // ============================================
@@ -318,10 +304,10 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const HERO_CONTENT = {
   headline: "Healing With Chi",
-  subheadline: "Reflective Coaching and Healing in Mazunte, Mexico",
+  subheadline: "Reflective Coaching and Healing in Da Nang, Vietnam",
   ctaPrimary: {
-    text: "Book Your Free Session",
-    subtext: "30 minutes. No pressure. No cost.",
+    text: "Get in Touch",
+    subtext: "Personal reply from Chi. Usually within 24 hours.",
   },
   ctaSecondary: {
     text: "Explore Services",
@@ -334,10 +320,10 @@ export const HERO_CONTENT = {
 // ============================================
 
 export const CTA_CONTENT = {
-  headline: "Your Free 30-Minute Session",
-  text: "Whether you're dealing with physical tension, emotional blockages, or simply seeking clarity - let's start with an honest conversation. No obligations, no sales pitch. Just a genuine connection.",
-  button: "Book Your Free Session",
-  subtext: "30 minutes. No pressure. No cost.",
+  headline: "Ready to Start Your Healing Journey?",
+  text: "Book an introductory session for €49. If we decide to continue working together, the full amount will be deducted from your program price.",
+  button: "Book Your Intro Session",
+  subtext: "€49 introductory session. Fully deducted if you continue.",
 } as const;
 
 // ============================================
@@ -358,33 +344,33 @@ export const CONTACT_CONTENT = {
 
 export const PAGE_SEO = {
   home: {
-    title: "Healing With Chi - Holistic Coaching & Healing Massage in Mazunte",
+    title: "Healing With Chi - Holistic Coaching & Healing Massage in Da Nang",
     description:
-      "Holistic coaching, bodywork, and energy healing in Mazunte, Mexico. Shiatsu, Reiki, Thai Massage, and life coaching. Book your free 30-minute session.",
+      "Holistic coaching and bodywork in Da Nang, Vietnam. Shiatsu, Reiki, Thai Massage, and reflective life coaching with Chi.",
     h1: "Healing With Chi",
   },
   coaching: {
     title: "Holistic Life Coaching - 4 Pillars Approach | Healing With Chi",
     description:
-      "Holistic life coaching in Mazunte, Mexico. Address trauma, depression, and addiction through behavior, nutrition, movement, and recovery. Free 30-min intro session.",
+      "Holistic life coaching in Da Nang, Vietnam. Address trauma, depression, and addiction through behavior, nutrition, movement, and recovery.",
     h1: "Holistic Coaching",
   },
   bodywork: {
     title: "Bodywork & Healing Massage - Shiatsu, Reiki, Thai | Healing With Chi",
     description:
-      "Professional bodywork and healing massage in Mazunte. Shiatsu, Reiki, Sports Massage, and certified Thai Massage. East meets West approach.",
+      "Professional bodywork and healing massage in Da Nang. Shiatsu, Reiki, Sports Massage, and certified Thai Massage. East meets West approach.",
     h1: "Bodywork & Healing",
   },
   about: {
     title: "About Chi - From Trauma to Healing | Healing With Chi",
     description:
-      "Chi's personal journey from adoption, bullying, depression, and addiction to becoming a holistic healer and coach in Mazunte, Mexico.",
+      "Chi's personal journey from adoption, bullying, depression, and addiction to becoming a holistic healer and coach in Da Nang, Vietnam.",
     h1: "About Chi",
   },
   contact: {
     title: "Contact & Book a Session | Healing With Chi",
     description:
-      "Contact Chi for holistic coaching, bodywork, or energy healing in Mazunte, Mexico. Book your free 30-minute session via WhatsApp or contact form.",
+      "Contact Chi for holistic coaching or bodywork in Da Nang, Vietnam. Reach out via WhatsApp or contact form.",
     h1: "Get In Touch",
   },
   privacy: {

@@ -1,7 +1,7 @@
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { CTA_CONTENT, SITE_CONFIG } from "@/lib/constants";
+import { CTA_CONTENT } from "@/lib/constants";
 
 export default function CTASection() {
   return (
@@ -14,11 +14,7 @@ export default function CTASection() {
           <p className="text-lg text-text-muted leading-relaxed mb-8">
             {CTA_CONTENT.text}
           </p>
-          <Button
-            href={SITE_CONFIG.whatsapp.link}
-            external
-            size="lg"
-          >
+          <Button href="/contact" size="lg">
             {CTA_CONTENT.button}
           </Button>
           <p className="text-text-muted text-sm mt-4">

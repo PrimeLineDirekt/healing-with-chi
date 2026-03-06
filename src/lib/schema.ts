@@ -58,13 +58,7 @@ export function generateServiceSchema(
     url,
     areaServed: {
       "@type": "Place",
-      name: "Mazunte, Oaxaca, Mexico",
-    },
-    offers: {
-      "@type": "Offer",
-      description: "Free 30-minute introductory session",
-      price: "0",
-      priceCurrency: "USD",
+      name: "Da Nang, Vietnam",
     },
   };
 }

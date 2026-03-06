@@ -7,14 +7,57 @@ import Button from "@/components/ui/Button";
 // and replace this with their form ID
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
+const RATE_LIMIT_MAX = 3;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const RATE_LIMIT_KEY = "hwc_contact_submissions";
+
+function checkRateLimit(): boolean {
+  try {
+    const raw = localStorage.getItem(RATE_LIMIT_KEY);
+    if (!raw) return true;
+    const timestamps: number[] = JSON.parse(raw);
+    const now = Date.now();
+    const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+    return recent.length < RATE_LIMIT_MAX;
+  } catch {
+    return true;
+  }
+}
+
+function recordSubmission(): void {
+  try {
+    const raw = localStorage.getItem(RATE_LIMIT_KEY);
+    const timestamps: number[] = raw ? JSON.parse(raw) : [];
+    const now = Date.now();
+    const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+    recent.push(now);
+    localStorage.setItem(RATE_LIMIT_KEY, JSON.stringify(recent));
+  } catch {
+    // localStorage unavailable - skip
+  }
+}
+
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [confirmed, setConfirmed] = useState(false);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
     setErrorMessage("");
+
+    if (!confirmed) {
+      setErrorMessage("Please confirm that this is a genuine message.");
+      setStatus("error");
+      return;
+    }
+
+    if (!checkRateLimit()) {
+      setErrorMessage("You have sent too many messages. Please try again in a few minutes.");
+      setStatus("error");
+      return;
+    }
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -29,7 +72,9 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
+        recordSubmission();
         setStatus("success");
+        setConfirmed(false);
         form.reset();
       } else {
         const data = await response.json();
@@ -143,11 +188,24 @@ export default function ContactForm() {
         />
       </div>
 
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="confirm"
+          checked={confirmed}
+          onChange={(e) => setConfirmed(e.target.checked)}
+          className="mt-1 w-4 h-4 rounded border-sand text-primary focus:ring-primary/20 accent-primary"
+        />
+        <label htmlFor="confirm" className="text-sm text-text-muted font-body cursor-pointer">
+          I confirm this is a genuine message and I would like to get in touch with Chi.
+        </label>
+      </div>
+
       <Button
         type="submit"
         size="lg"
         className="w-full"
-        disabled={status === "submitting"}
+        disabled={status === "submitting" || !confirmed}
       >
         {status === "submitting" ? "Sending..." : "Send Message"}
       </Button>

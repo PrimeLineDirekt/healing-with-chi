@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const modalityImages: Record<string, string> = {
-  shiatsu: "/images/bodywork-massage.jpg",
-  reiki: "/images/energy-healing.jpg",
+  shiatsu: "/images/energy-healing.jpg",
+  reiki: "/images/bodywork-massage.jpg",
   "sports-massage": "/images/deep-tissue.jpg",
-  "thai-massage": "/images/spa-atmosphere.jpg",
+  "thai-massage": "/images/thai-massage.jpg",
 };
 
 export default function BodyworkPage() {
@@ -121,20 +121,6 @@ export default function BodyworkPage() {
             </ScrollReveal>
           ))}
         </div>
-      </Section>
-
-      {/* Energy Healing */}
-      <Section id="energy-healing" background="sand">
-        <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-text mb-6">
-              {BODYWORK_CONTENT.energyHealing.title}
-            </h2>
-            <p className="text-lg text-text-muted leading-relaxed">
-              {BODYWORK_CONTENT.energyHealing.description}
-            </p>
-          </div>
-        </ScrollReveal>
       </Section>
 
       {/* CTA */}
