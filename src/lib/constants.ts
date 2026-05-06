@@ -35,6 +35,7 @@ export const NAV_LINKS = [
   { label: "Coaching", href: "/coaching" },
   { label: "Bodywork", href: "/bodywork" },
   { label: "Men's Circle", href: "/circles" },
+  { label: "Self-Defense", href: "/self-defense" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -202,6 +203,48 @@ export const CIRCLES: Circle[] = [
     welcome: "You are welcome.",
   },
 ];
+
+// ============================================
+// Self-Defense Workshop
+// ============================================
+
+export const SELFDEFENSE_CONTENT = {
+  pageTitle: "Self-Defense Workshop",
+  eyebrow: "(Women's) Self-Defense - Also for men",
+  headline: "A Soft and Intelligent Way",
+  subheadline:
+    "Practicing with one another respectfully and consciously",
+  intro:
+    "This workshop is grounded in techniques from Wing Chun, a style of Kung Fu founded by a woman. The whole approach is built around using intelligence over strength, body-weight over force, and timing over aggression.",
+  philosophy: [
+    {
+      title: "Intelligence over strength",
+      text: "Wing Chun was created by a woman so it would not depend on size or muscle. The techniques use leverage, body-weight, and momentum so a smaller person can move a larger one without effort.",
+    },
+    {
+      title: "Soft, non-aggressive practice",
+      text: "We practice slowly and with control. There is no hard contact, no sparring, no need for prior sport or martial-arts experience. If you have never trained before, you are welcome here.",
+    },
+    {
+      title: "Like playing chess with our bodies",
+      text: "Each exchange is a small puzzle: read the angle, redirect the energy, find the line of least resistance. It is playful, smart, and surprisingly fun.",
+    },
+  ],
+  forWho: {
+    heading: "Who is it for?",
+    text: "Everyone. Women, men, non-binary people, anyone who wants to feel more grounded, more aware, and more capable in their own body. Beginners especially welcome.",
+  },
+  details: {
+    time: "19:00 - 20:30",
+    location: "Casa Om",
+    locationLink: "https://maps.app.goo.gl/QAYrtXsCZSF6PhA18",
+    cost: "On donation",
+  },
+  cta: {
+    heading: "Want to Join the Next Workshop?",
+    text: "Send a message and I will share the next dates as soon as they are scheduled.",
+  },
+} as const;
 
 // ============================================
 // Bodywork Detail
@@ -447,6 +490,12 @@ export const PAGE_SEO = {
     description:
       "A safe, judgment-free space for men to talk honestly. No advice, no fixing, just men bonding together. Hosted in Da Nang, Vietnam.",
     h1: "Men's Circle",
+  },
+  selfDefense: {
+    title: "Self-Defense Workshop - Wing Chun for Everyone | Healing With Chi",
+    description:
+      "Soft, intelligent self-defense workshop based on Wing Chun. Body-weight and momentum over strength. Open to women, men, and non-binary people. Hosted at Casa Om.",
+    h1: "Self-Defense Workshop",
   },
   privacy: {
     title: "Privacy Policy | Healing With Chi",
