@@ -23,12 +23,12 @@ export default function SelfDefensePage() {
           alt="Self-defense workshop at Casa Om - Chi instructing"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Radial vignette: clear around Chi (50% x, 72% y), darker toward edges - focuses the eye without cropping */}
+        {/* Tight radial spotlight on Chi (50% x, 72% y) - everything outside fades to strong dark, including the woman in green to the left */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 55% 65% at 50% 72%, transparent 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0.55) 78%, rgba(0,0,0,0.8) 100%)",
+              "radial-gradient(ellipse 18% 25% at 50% 72%, transparent 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.85) 100%)",
           }}
         />
         {/* Top scrim for headline legibility, fades out before the subject area */}
