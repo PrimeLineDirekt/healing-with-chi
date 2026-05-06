@@ -16,17 +16,27 @@ export const metadata: Metadata = {
 export default function SelfDefensePage() {
   return (
     <>
-      {/* Hero - workshop photo from Casa Om, anchored to subject area */}
-      <section className="relative overflow-hidden bg-text flex items-center justify-center min-h-[640px] md:min-h-[720px] lg:min-h-[760px] py-20">
+      {/* Hero - portrait workshop photo preserved as-is with blurred ambient side fill */}
+      <section className="relative overflow-hidden bg-text flex items-center justify-center min-h-[640px] md:min-h-[760px] lg:min-h-[820px] py-16">
+        {/* Layer 1: same image as a blurred, dimmed ambient backdrop covering the full hero width */}
         <img
           src="/images/self-defense-hero.jpg"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "center 78%" }}
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl brightness-50 saturate-150"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/80" />
+        {/* Layer 2: the actual photo, full aspect preserved (no zoom, no crop) */}
+        <img
+          src="/images/self-defense-hero.jpg"
+          alt="Self-defense workshop at Casa Om"
+          className="absolute inset-0 w-full h-full object-contain"
+        />
+        {/* Subtle vertical scrim so the headline reads cleanly over the photo center */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/65" />
+        {/* Side vignette to soften where photo meets blurred fill */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/35" />
         <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ember-glow opacity-50 pointer-events-none"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ember-glow opacity-45 pointer-events-none"
           aria-hidden="true"
         />
 
