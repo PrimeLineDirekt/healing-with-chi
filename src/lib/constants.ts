@@ -34,6 +34,7 @@ export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Coaching", href: "/coaching" },
   { label: "Bodywork", href: "/bodywork" },
+  { label: "Men's Circle", href: "/circles" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -133,6 +134,74 @@ export const COACHING_CONTENT = {
     "Stress management",
   ],
 } as const;
+
+// ============================================
+// Men's Circle
+// ============================================
+
+export interface Circle {
+  id: string;
+  title: string;
+  audience: string;
+  question: string;
+  intro: string;
+  promise: string[];
+  welcome: string;
+}
+
+export const CIRCLES_CONTENT = {
+  pageTitle: "Men's Circle",
+  subheadline: "A space to be heard, not fixed",
+  intro:
+    "Some conversations don't belong in a coffee shop. They need quiet, presence, and people who agree to listen without trying to solve. That's what this circle is for.",
+  approach:
+    "No agenda beyond what each person brings. No advice given unless asked. What's said in the circle stays in the circle.",
+  about: {
+    heading: "What is a Men's Circle?",
+    lead: "A small gathering of men coming together to connect in a real way.",
+    faq: [
+      {
+        q: "How does the circle begin?",
+        a: "We sit in a circle. At the beginning, we make a simple agreement that we do our best not to judge and that we allow ourselves to be who we are.",
+      },
+      {
+        q: "How do we communicate?",
+        a: "The one who is holding the talking stick speaks, the others listen. I hold the structure of the communication, not as an authority.",
+      },
+      {
+        q: "Do I have to share or speak?",
+        a: "There is no pressure to share or speak. You can speak or just be there.",
+      },
+      {
+        q: "How does the circle close?",
+        a: "We close with a simple exercise.",
+      },
+      {
+        q: "What is the deeper intention?",
+        a: "A space to drop our masks, to be more ourselves, and maybe even find a different definition of masculinity.",
+      },
+    ],
+    feelInto:
+      "You can DM me for a short 15 min call if you'd like to feel into it first.",
+  },
+} as const;
+
+export const CIRCLES: Circle[] = [
+  {
+    id: "mens-circle",
+    title: "Men's Circle",
+    audience: "For men, of any age, who are willing to show up honestly.",
+    question: "In today's world, what does it really mean to be a man?",
+    intro:
+      "Most men don't talk. Not about what's really going on.",
+    promise: [
+      "This is a space where you can.",
+      "Where there is no judgment, and no need to advise or help.",
+      "Just men bonding together.",
+    ],
+    welcome: "You are welcome.",
+  },
+];
 
 // ============================================
 // Bodywork Detail
@@ -372,6 +441,12 @@ export const PAGE_SEO = {
     description:
       "Contact Chi for holistic coaching or bodywork in Da Nang, Vietnam. Reach out via WhatsApp or contact form.",
     h1: "Get In Touch",
+  },
+  circles: {
+    title: "Men's Circle | Healing With Chi",
+    description:
+      "A safe, judgment-free space for men to talk honestly. No advice, no fixing, just men bonding together. Hosted in Da Nang, Vietnam.",
+    h1: "Men's Circle",
   },
   privacy: {
     title: "Privacy Policy | Healing With Chi",

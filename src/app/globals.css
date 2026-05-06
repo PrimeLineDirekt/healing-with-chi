@@ -137,6 +137,73 @@ html {
 }
 
 /* ============================================
+   Ember Glow Animation (Mandy's Circles)
+   Warm sunset pulse, evokes campfire / dusk
+   ============================================ */
+@keyframes ember-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+
+@keyframes ember-glow-shadow {
+  0%, 100% {
+    box-shadow:
+      0 0 60px rgba(198, 123, 92, 0.35),
+      0 0 120px rgba(184, 139, 116, 0.18),
+      inset 0 0 40px rgba(255, 200, 140, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 90px rgba(198, 123, 92, 0.55),
+      0 0 180px rgba(184, 139, 116, 0.3),
+      inset 0 0 60px rgba(255, 200, 140, 0.25);
+  }
+}
+
+.ember-glow {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 200, 140, 0.9) 0%,
+    rgba(198, 123, 92, 0.7) 35%,
+    rgba(164, 112, 87, 0.4) 65%,
+    transparent 100%
+  );
+  animation:
+    ember-pulse 5s ease-in-out infinite,
+    ember-glow-shadow 5s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .ember-glow {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* Slow horizontal drift for ridge silhouette mood */
+@keyframes ridge-drift {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-8px) translateY(-3px);
+  }
+}
+
+.ridge-drift {
+  animation: ridge-drift 18s ease-in-out infinite;
+}
+
+/* ============================================
    Scroll Reveal Animation
    ============================================ */
 @keyframes reveal-up {
