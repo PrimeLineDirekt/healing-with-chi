@@ -232,7 +232,7 @@ export const SELFDEFENSE_CONTENT = {
   ],
   forWho: {
     heading: "Who is it for?",
-    text: "Everyone. Women, men, non-binary people, anyone who wants to feel more grounded, more aware, and more capable in their own body. Beginners especially welcome.",
+    text: "Everyone. Women, men, anyone who wants to feel more grounded, more aware, and more capable in their own body. Beginners especially welcome.",
   },
   details: {
     time: "19:00 - 20:30",

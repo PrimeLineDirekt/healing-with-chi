@@ -21,8 +21,8 @@ export default function SelfDefensePage() {
         <img
           src="/images/self-defense-hero.jpg"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ objectPosition: "center 35%" }}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "center 78%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/80" />
         <div
@@ -93,49 +93,6 @@ export default function SelfDefensePage() {
             <p className="font-heading italic text-xl md:text-2xl text-text-muted leading-relaxed">
               {SELFDEFENSE_CONTENT.forWho.text}
             </p>
-          </div>
-        </ScrollReveal>
-      </Section>
-
-      {/* Practical details */}
-      <Section background="surface">
-        <ScrollReveal>
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-text text-center mb-12">
-              Practical Details
-            </h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              <div className="bg-background rounded-lg p-6 text-center border border-sand-light">
-                <p className="font-heading italic text-primary text-sm uppercase tracking-wide mb-2">
-                  Time
-                </p>
-                <p className="font-heading text-2xl text-text">
-                  {SELFDEFENSE_CONTENT.details.time}
-                </p>
-              </div>
-              <div className="bg-background rounded-lg p-6 text-center border border-sand-light">
-                <p className="font-heading italic text-primary text-sm uppercase tracking-wide mb-2">
-                  Where
-                </p>
-                <a
-                  href={SELFDEFENSE_CONTENT.details.locationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-heading text-2xl text-text hover:text-primary transition-colors inline-block"
-                >
-                  {SELFDEFENSE_CONTENT.details.location}
-                </a>
-                <p className="text-xs text-text-muted mt-2">Open in Maps</p>
-              </div>
-              <div className="bg-background rounded-lg p-6 text-center border border-sand-light">
-                <p className="font-heading italic text-primary text-sm uppercase tracking-wide mb-2">
-                  Cost
-                </p>
-                <p className="font-heading text-2xl text-text">
-                  {SELFDEFENSE_CONTENT.details.cost}
-                </p>
-              </div>
-            </div>
           </div>
         </ScrollReveal>
       </Section>
