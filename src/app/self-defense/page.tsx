@@ -16,23 +16,23 @@ export const metadata: Metadata = {
 export default function SelfDefensePage() {
   return (
     <>
-      {/* Hero - portrait workshop photo preserved as-is with blurred ambient side fill */}
-      <section className="relative overflow-hidden bg-text flex items-center justify-center min-h-[640px] md:min-h-[760px] lg:min-h-[820px] py-16">
-        {/* Layer 1: same image as a blurred, dimmed ambient backdrop covering the full hero width (sides only get this) */}
+      {/* Hero - landscape workshop scene, full visible, vignette draws the eye to Chi */}
+      <section className="relative overflow-hidden bg-text flex items-start justify-center min-h-[500px] md:min-h-[600px] lg:min-h-[680px] pt-24 md:pt-28 pb-20">
         <img
           src="/images/self-defense-hero.jpg"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl brightness-[0.45] saturate-150"
+          alt="Self-defense workshop at Casa Om - Chi instructing"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Layer 2: the actual photo, full aspect preserved (no zoom, no crop) - shown clean, untouched */}
-        <img
-          src="/images/self-defense-hero.jpg"
-          alt="Self-defense workshop at Casa Om"
-          className="absolute inset-0 w-full h-full object-contain"
+        {/* Radial vignette: clear around Chi (50% x, 72% y), darker toward edges - focuses the eye without cropping */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 55% 65% at 50% 72%, transparent 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0.55) 78%, rgba(0,0,0,0.8) 100%)",
+          }}
         />
-        {/* Headline scrim: only behind the headline area, leaves photo bright */}
-        <div className="absolute inset-x-0 top-1/4 bottom-1/4 bg-gradient-to-b from-transparent via-black/45 to-transparent pointer-events-none" />
+        {/* Top scrim for headline legibility, fades out before the subject area */}
+        <div className="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-black/55 via-black/25 to-transparent pointer-events-none" />
 
         <div className="relative z-10 container-site">
           <ScrollReveal>
