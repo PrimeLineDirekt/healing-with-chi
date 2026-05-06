@@ -18,27 +18,21 @@ export default function SelfDefensePage() {
     <>
       {/* Hero - portrait workshop photo preserved as-is with blurred ambient side fill */}
       <section className="relative overflow-hidden bg-text flex items-center justify-center min-h-[640px] md:min-h-[760px] lg:min-h-[820px] py-16">
-        {/* Layer 1: same image as a blurred, dimmed ambient backdrop covering the full hero width */}
+        {/* Layer 1: same image as a blurred, dimmed ambient backdrop covering the full hero width (sides only get this) */}
         <img
           src="/images/self-defense-hero.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl brightness-50 saturate-150"
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl brightness-[0.45] saturate-150"
         />
-        {/* Layer 2: the actual photo, full aspect preserved (no zoom, no crop) */}
+        {/* Layer 2: the actual photo, full aspect preserved (no zoom, no crop) - shown clean, untouched */}
         <img
           src="/images/self-defense-hero.jpg"
           alt="Self-defense workshop at Casa Om"
           className="absolute inset-0 w-full h-full object-contain"
         />
-        {/* Subtle vertical scrim so the headline reads cleanly over the photo center */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/65" />
-        {/* Side vignette to soften where photo meets blurred fill */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/35" />
-        <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ember-glow opacity-45 pointer-events-none"
-          aria-hidden="true"
-        />
+        {/* Headline scrim: only behind the headline area, leaves photo bright */}
+        <div className="absolute inset-x-0 top-1/4 bottom-1/4 bg-gradient-to-b from-transparent via-black/45 to-transparent pointer-events-none" />
 
         <div className="relative z-10 container-site">
           <ScrollReveal>
