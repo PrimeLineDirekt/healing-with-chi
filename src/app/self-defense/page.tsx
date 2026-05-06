@@ -28,7 +28,7 @@ export default function SelfDefensePage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 18% 25% at 50% 72%, transparent 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.85) 100%)",
+              "radial-gradient(ellipse 18% 25% at 50% 72%, transparent 0%, rgba(0,0,0,0.11) 35%, rgba(0,0,0,0.52) 75%, rgba(0,0,0,0.64) 100%)",
           }}
         />
         {/* Top scrim for headline legibility, fades out before the subject area */}
