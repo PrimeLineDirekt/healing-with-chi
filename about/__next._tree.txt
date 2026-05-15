@@ -1,0 +1,6 @@
+:HL["/healing-with-chi/_next/static/chunks/a6ea809cb92aa87e.css","style"]
+:HL["/healing-with-chi/_next/static/media/01e4147cff8141ee-s.p.7787e134.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/healing-with-chi/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/healing-with-chi/images/golden-grass.jpg","image"]
+:HL["/healing-with-chi/images/chi-profile.png","image"]
+0:{"buildId":"f2moo4zYoDuHp4xaAb8oj","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"about","paramType":null,"paramKey":"about","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
